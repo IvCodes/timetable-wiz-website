@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+
+  <title>Timetable Wiz - Advanced Timetable Generation Solution</title>
+</head>
+
+<body>
+  <nav id="navmenu" class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="images/logos/LogoTimeTableWiz_v2.webp" width="30" height="30" class="d-inline-block align-top"
+          loading="lazy" alt="Timetable Wiz Logo">
+        Timetable Wiz
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#333; font-size:28px;"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="navmenu-links" class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProjectScope" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Project Scope
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownProjectScope">
+              <a class="dropdown-item" href="#literature_survey">Background & Literature</a>
+              <a class="dropdown-item" href="#research_gap">Research Gap</a>
+              <a class="dropdown-item" href="#research_problem_solution">Problem & Solution</a>
+              <a class="dropdown-item" href="#research_objectives">Objectives</a>
+              <a class="dropdown-item" href="#methodology">Methodology</a>
+              <a class="dropdown-item" href="#tech_used">Technologies</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline_section">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#key_results">Key Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#achievements">Achievements</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDownloads" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Downloads
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDownloads">
+              <a class="dropdown-item" href="#documents_downloads">Documents</a>
+              <a class="dropdown-item" href="#presentations_downloads">Presentations</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about_team">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact_section">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="hero-cta">
+      <h1>Timetable Wiz</h1>
+      <p>Advanced Timetable Generation Solution for Educational Institutes</p>
+      <a class="btn btn-outline-light" type="button" href="#literature_survey">Learn More <i
+          class="fas fa-chevron-right btn-icon"></i></a>
+    </div>
+  </section>
+
+  <section id="project-scope-container" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Project Scope</h5>
+
+      <div id="literature_survey" class="sub-section">
+        <h2>Background & Literature Survey</h2>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 pt-lg-4 justify-text">
+            <p>Educational timetable scheduling is a significant combinatorial optimization challenge, crucial for the
+              smooth operation of academic institutions. It involves assigning resources like teaching staff, student
+              groups, and classrooms to a predefined set of events within specific time slots. This task is complicated
+              by numerous hard constraints (e.g., a lecturer cannot be in two places at once) that make a timetable
+              feasible, and soft constraints (e.g., minimizing student idle time) that enhance its quality. The problem
+              is formally recognized as NP-hard. Traditional manual or simplistic methods are often inadequate, leading
+              to suboptimal resource use and dissatisfaction.</p>
+            <p>The literature explores various computational intelligence techniques. Evolutionary Algorithms (EAs),
+              including Genetic Algorithms (GAs) and advanced Multi-Objective EAs like NSGA-II, MOEA/D, and SPEA2, are
+              widely applied. Reinforcement Learning (RL) approaches such as Q-Learning, DQN, and SARSA, sometimes
+              combined with Multi-Criteria Decision Making (MCDM), offer adaptive solutions. Bio-inspired Swarm
+              Intelligence methods like Ant Colony Optimization (ACO), Bee Colony Optimization (BCO), and Particle Swarm
+              Optimization (PSO), along with hybrid methods, have also been investigated. A survey conducted at the Sri
+              Lanka Institute of Information Technology (SLIIT) revealed user dissatisfaction with existing timetables
+              due to issues like clashes, long gaps, and poor communication, underscoring the need for more advanced
+              solutions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="research_gap" class="sub-section">
+        <h2>Research Gap</h2>
+        <div class="justify-text">
+          <p>Despite extensive research, a significant gap exists between the capabilities of isolated algorithmic
+            studies and the requirements for a comprehensive, adaptable, and user-centric timetabling solution for
+            real-world educational institutions. Key identified gaps include:</p>
+          <ul>
+            <li>Lack of objective cross-paradigm comparisons of advanced optimization algorithms (EA, RL, Swarm) using
+              unified metrics.</li>
+            <li>Inadequate handling of dynamic real-world constraints and the need for rapid rescheduling.</li>
+            <li>Absence of a standardized, comprehensive evaluation framework that considers a wide range of quality
+              metrics beyond simple feasibility.</li>
+            <li>A disconnect between advanced algorithmic potential and practical usability, often due to a lack of
+              integration into functional software with features like Role-Based Access Control (RBAC), validated manual
+              editing, and robust data handling.</li>
+            <li>Limited understanding of the scalability and effectiveness of various algorithms, especially novel
+              hybrid approaches, on large, complex institutional datasets.</li>
+          </ul>
+          <p>Timetable Wiz aims to bridge these gaps by integrating multiple paradigms, providing a robust evaluation
+            system, and incorporating essential practical software features for real-world deployment.</p>
+        </div>
+      </div>
+
+      <div id="research_problem_solution" class="sub-section">
+        <h2>Research Problem & Solution</h2>
+        <div class="justify-text">
+          <h5><strong>The Research Problem</strong></h5>
+          <p>The central research problem is the lack of an integrated, adaptive, and comprehensively evaluated
+            timetable system capable of objectively comparing diverse advanced optimization algorithms. This system
+            needs to address real-world complexities, dynamic constraints, multi-objective trade-offs, and incorporate
+            essential user-centric features for practical deployment in educational institutions. Current systems often
+            fall short in one or more of these aspects, leading to suboptimal scheduling outcomes.</p>
+          <h5 class="mt-4"><strong>Proposed Solution: Timetable Wiz</strong></h5>
+          <p>Timetable Wiz is an Advanced Timetable Generation Solution designed to tackle these challenges. It
+            integrates multiple sophisticated optimization paradigms: Evolutionary Algorithms (NSGA-II, MOEA/D, SPEA2),
+            Reinforcement Learning (Q-Learning, DQN, SARSA, potentially with MCDM), and Swarm Intelligence (ACO, BCO,
+            PSO, and a novel hybrid Ant-Bee Swarm Optimization). A cornerstone of the project is a robust Timetable
+            Evaluation System that objectively assesses schedule quality based on constraint satisfaction, resource
+            utilization, workload balance, and institutional priorities. For practical application, Timetable Wiz
+            incorporates features such as Role-Based Access Control (RBAC), an Extract-Transform-Load (ETL) pipeline for
+            data handling, interactive manual editing capabilities with real-time conflict validation, and potential for
+            API integration.</p>
+        </div>
+      </div>
+
+      <div id="research_objectives" class="sub-section">
+        <h2>Research Objectives</h2>
+        <div class="justify-text">
+          <h5>Main Objective:</h5>
+          <p>To design, develop, and evaluate an Advanced Timetable Generation Solution that integrates multiple
+            optimization paradigms (Evolutionary Algorithms, Reinforcement Learning, Swarm Intelligence), incorporates a
+            comprehensive multi-criteria evaluation framework, and includes practical system features to effectively
+            address the complex, dynamic, and user-centric requirements of educational timetable scheduling.</p>
+          <h5 class="mt-3">Specific Objectives:</h5>
+          <ol>
+            <li>Implement and compare diverse optimization algorithms from EAs, RL, and Swarm Intelligence, adapted for
+              educational timetabling.</li>
+            <li>Develop a comprehensive timetable evaluation system with a multi-criteria module assessing hard/soft
+              constraints and resource utilization, including a weighted scoring mechanism.</li>
+            <li>Design and implement an integrated software architecture with data handling (ETL), optimization modules,
+              evaluation engine, database, backend API, and an interactive frontend.</li>
+            <li>Incorporate practical user-centric features such as Role-Based Access Control (RBAC), interactive manual
+              editing with real-time conflict validation, and explore a chatbot interface.</li>
+            <li>Validate system performance and algorithm scalability using real-world (SLIIT) and benchmark (Muni)
+              datasets, analyzing trade-offs.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="methodology" class="sub-section">
+        <h2>Methodology</h2>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 pt-lg-4 text-center mb-4">
+            <div class="mermaid">
+graph TB
+    A[React Frontend] --> B[FastAPI Backend]
+    B --> C[Scheduler Engine]
+    C --> D[EA Algorithms]
+    C --> E[RL Algorithms]
+    C --> F[Swarm Algorithms]
+    B --> G[MongoDB Database]
+    C --> H[Evaluation Engine]
+    B --> I[RBAC System]
+    G --> J[ETL Pipeline]
+    
+    style A fill:#3498db
+    style B fill:#2ecc71
+    style C fill:#f39c12
+    style H fill:#e74c3c
+    style G fill:#9b59b6
+    style I fill:#34495e
+            </div>
+            <p><strong>Interactive System Architecture Diagram</strong></p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-12 col-sm-12 pt-lg-4 justify-text">
+            <p>The research methodology involved requirement analysis, selecting and implementing optimization algorithms (EAs, RL, Swarm Intelligence), developing a multi-criteria evaluation framework, designing an integrated modular software system, and rigorous testing with comparative analysis.</p>
+            <p><strong>System Architecture:</strong> A multi-layered architecture with a React Frontend, FastAPI Backend, modular Scheduler Engine, and an Evaluation Engine.</p>
+            <p><strong>Data Handling:</strong> Tested with SLIIT Computing and Muni-fsps-spr17 (ITC 2019) datasets.</p>
+            <p><strong>Core Logic:</strong> Preprocessing data, defining modules, auto-generating activities, assigning teachers, and dynamic lab subgrouping.</p>
+          </div>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-md-12 text-center">
+            <h5><strong>Research Methodology Workflow</strong></h5>
+            <div class="mermaid">
+flowchart TD
+    A[Literature Review & Requirements Analysis] --> B[Algorithm Selection & Design]
+    B --> C[System Architecture Design]
+    C --> D[Implementation Phase 1: Core Algorithms]
+    D --> E[Implementation Phase 2: Integration & UI]
+    E --> F[Testing & Validation]
+    F --> G[Performance Evaluation]
+    G --> H[Research Paper & Documentation]
+    
+    B --> B1[Evolutionary Algorithms<br/>NSGA-II, MOEA/D, SPEA2]
+    B --> B2[Reinforcement Learning<br/>Q-Learning, DQN, SARSA]
+    B --> B3[Swarm Intelligence<br/>ACO, BCO, PSO]
+    
+    F --> F1[SLIIT Dataset Testing]
+    F --> F2[Muni Benchmark Testing]
+    F --> F3[Scalability Analysis]
+    
+    G --> G1[Hard Constraint Evaluation]
+    G --> G2[Soft Constraint Assessment]
+    G --> G3[Performance Metrics Analysis]
+    
+    style A fill:#e8f4fd
+    style H fill:#d4edda
+    style B1 fill:#fff3cd
+    style B2 fill:#fff3cd
+    style B3 fill:#fff3cd
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tech_used" class="sub-section">
+        <h2>Technologies Used</h2>
+        <div class="justify-text">
+          <p>The Timetable Wiz project leverages a comprehensive stack of modern technologies for its development and potential deployment:</p>
+        </div>
+        <div class="row technology mt-4 text-center">
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" class="tech-icon">
+            <p>React.js</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" class="tech-icon">
+            <p>Python</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" class="tech-icon">
+            <p>FastAPI</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png" alt="MongoDB" class="tech-icon">
+            <p>MongoDB</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="TensorFlow" class="tech-icon">
+            <p>TensorFlow</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" alt="PyTorch" class="tech-icon">
+            <p>PyTorch</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://deap.readthedocs.io/en/master/_images/deap_logo.png" alt="DEAP" class="tech-icon">
+            <p>DEAP</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" class="tech-icon">
+            <p>Docker</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure App Service" class="tech-icon">
+            <p>Azure</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Actions" class="tech-icon">
+            <p>GitHub Actions</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Pytest_logo.svg" alt="Pytest" class="tech-icon">
+            <p>Pytest</p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Jest_logo.svg" alt="Jest" class="tech-icon">
+            <p>Jest</p>
+          </div>
+        </div>
+        <div class="justify-text">
+          <p>Additional tools include Vite, JavaScript, Tailwind CSS, Redux, React Router, NumPy, Pandas, and PyMoo.</p>
+        </div>
+      </div>
+      
+
+  <section id="timeline_section" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Project Timeline</h5>
+      <div class="sub-section">
+        <h2>Key Phases</h2>
+        <p>The project spanned from May 2024 to May 2025, encompassing several critical stages as detailed in the
+          project's Gantt Chart.</p>
+        
+        <div class="text-center mb-4">
+          <h5><strong>Project Timeline Overview</strong></h5>
+          <div class="mermaid">
+gantt
+    title Timetable Wiz Project Timeline
+    dateFormat  YYYY-MM-DD
+    section Research Phase
+    Literature Review           :done, lit, 2024-05-01, 2024-07-31
+    Requirement Analysis        :done, req, 2024-06-01, 2024-07-15
+    Topic Approval             :milestone, approval, 2024-07-31, 0d
+    
+    section Proposal Stage
+    Proposal Development       :done, prop, 2024-08-01, 2024-08-31
+    Proposal Presentation      :milestone, prop-pres, 2024-09-15, 0d
+    
+    section Implementation 1
+    System Architecture        :done, arch, 2024-09-01, 2024-10-31
+    GA Implementation          :done, ga, 2024-10-01, 2024-12-31
+    RBAC Development          :done, rbac, 2024-11-01, 2024-12-31
+    50% Progress Presentation  :milestone, prog1, 2025-01-15, 0d
+    
+    section Implementation 2
+    RL & Swarm Integration    :active, rl-swarm, 2025-01-16, 2025-03-31
+    Evaluation System         :active, eval, 2025-02-01, 2025-03-31
+    Testing & Validation      :testing, 2025-03-01, 2025-04-15
+    90% Progress Presentation :milestone, prog2, 2025-04-01, 0d
+    
+    section Final Stage
+    Research Paper           :paper, 2025-04-01, 2025-04-30
+    Final Documentation      :final-doc, 2025-04-15, 2025-05-08
+    Final Presentation       :milestone, final-pres, 2025-05-08, 0d
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-event">
+            <label class="timeline-event-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-event-thumbnail">May - July 2024</p>
+              <h3>Initial Stage & Research</h3>
+              <p>Focused on comprehensive literature review, requirement gathering from stakeholders, in-depth study of
+                the research area, and obtaining topic approval.</p>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <label class="timeline-event-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-event-thumbnail">August - September 2024</p>
+              <h3>Proposal Stage</h3>
+              <p>Development and submission of the detailed project proposal, followed by a formal proposal
+                presentation.</p>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <label class="timeline-event-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-event-thumbnail">September 2024 - January 2025</p>
+              <h3>Implementation Stage 1</h3>
+              <p>Core development including research and selection of GA frameworks, system architecture design, data
+                collection and processing, initial GA design and tuning, RBAC system development, and API development
+                with export functionalities. Concluded with a 50% progress presentation.</p>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <label class="timeline-event-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-event-thumbnail">February - April 2025</p>
+              <h3>Implementation Stage 2</h3>
+              <p>Integration of all system components (including RL and Swarm Intelligence modules, and the evaluation
+                system), extensive testing and validation procedures, and preparation of the research paper. This stage
+                culminated in a 90% progress presentation and targeted the dissertation submission for April 2025.</p>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <label class="timeline-event-icon"></label>
+            <div class="timeline-event-copy">
+              <p class="timeline-event-thumbnail">April - May 2025</p>
+              <h3>Final Stage</h3>
+              <p>Finalization of the thesis with proofreading and sign-off, system deployment for feedback, and the
+                final project presentation and viva. The final document submission was dated 08-May-2025.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="key_results" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Key Results & Findings</h5>
+      <div class="sub-section">
+        <h2>Performance Insights & Outcomes</h2>
+        <div class="justify-text">
+          <p>The comprehensive evaluation of Timetable Wiz yielded significant findings:</p>
+          <ul>
+            <li><strong>Hard Constraint Satisfaction:</strong> Deep Q-Network (DQN) demonstrated superior performance with
+              the lowest constraint violations (2-3 violations), showcasing the power of deep learning in complex optimization.
+              Traditional RL methods like Q-Learning and SARSA also performed well, while Swarm Intelligence and Evolutionary
+              Algorithms showed moderate performance with 3-11 violations.</li>
+            <li><strong>Soft Constraint Optimization:</strong> DQN consistently achieved the highest quality scores (89% average)
+              across all soft constraint metrics. Swarm Intelligence algorithms (PSO, ACO, BCO) performed competitively with
+              82-86% scores, while Evolutionary Algorithms achieved 78-82% performance.</li>
+            <li><strong>Convergence and Learning:</strong> DQN showed excellent learning capability and convergence to optimal
+              solutions through neural network-based function approximation. Traditional RL methods demonstrated good efficiency,
+              while MOEAs excelled at generating diverse solution sets.</li>
+            <li><strong>Computational Trade-offs:</strong> While DQN required more computational resources (312s, 1650MB) due to
+              neural network training, it delivered superior solution quality. Simpler RL methods remained efficient, and
+              Swarm Intelligence provided a good balance between quality and computational cost.</li>
+            <li><strong>Resource Utilization:</strong> All tested paradigms effectively balanced the use of resources
+              (rooms, teachers) and handled structural requirements like lab splitting.</li>
+            <li><strong>System Features:</strong> The integrated evaluation framework, Role-Based Access Control, and
+              real-time conflict validation during manual editing proved crucial for enhancing practical usability and
+              bridging the gap between theory and real-world application.</li>
+            <li><strong>Deep Learning Advantage:</strong> The research demonstrated that deep learning approaches (DQN)
+              can significantly outperform traditional optimization methods in complex scheduling scenarios, though at
+              higher computational cost. The choice between algorithms depends on institutional priorities regarding
+              solution quality versus computational efficiency.</li>
+          </ul>
+        </div>
+        <div class="text-center mb-4">
+          <h5><strong>Algorithm Performance Comparison Overview</strong></h5>
+          <div class="mermaid">
+graph LR
+    subgraph "Evolutionary Algorithms"
+        EA1[NSGA-II<br/>Hard: 9 violations<br/>Soft: 78% avg<br/>Time: 245s]
+        EA2[MOEA/D<br/>Hard: 7 violations<br/>Soft: 82% avg<br/>Time: 198s]
+        EA3[SPEA2<br/>Hard: 11 violations<br/>Soft: 78% avg<br/>Time: 267s]
+    end
+    
+    subgraph "Reinforcement Learning"
+        RL1[Q-Learning<br/>Hard: 5 violations<br/>Soft: 82% avg<br/>Time: 89s]
+        RL2[DQN<br/>Hard: 2 violations<br/>Soft: 89% avg<br/>Time: 312s]
+        RL3[SARSA<br/>Hard: 6 violations<br/>Soft: 79% avg<br/>Time: 92s]
+    end
+    
+    subgraph "Swarm Intelligence"
+        SI1[ACO<br/>Hard: 4 violations<br/>Soft: 84% avg<br/>Time: 234s]
+        SI2[BCO<br/>Hard: 5 violations<br/>Soft: 82% avg<br/>Time: 187s]
+        SI3[PSO<br/>Hard: 3 violations<br/>Soft: 86% avg<br/>Time: 156s]
+    end
+    
+    RL2 --> Winner[Best Overall Performance<br/>Deep Learning Excellence]
+    
+    style RL2 fill:#2ecc71
+    style Winner fill:#f39c12
+    style EA1 fill:#e8f4fd
+    style EA2 fill:#e8f4fd
+    style EA3 fill:#e8f4fd
+    style RL1 fill:#fff3cd
+    style RL3 fill:#fff3cd
+    style SI1 fill:#d1ecf1
+    style SI2 fill:#d1ecf1
+    style SI3 fill:#d1ecf1
+          </div>
+        </div>
+
+     
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Research Achievements</h5>
+      <div class="sub-section">
+        <h2>Publications & Recognition</h2>
+        <div class="justify-text">
+          <div class="row">
+            <div class="col-md-8">
+              <h5><strong>Conference Publication</strong></h5>
+              <p>Our research paper has been <strong>accepted and peer-reviewed</strong> for presentation at:</p>
+              <div class="alert alert-success" role="alert">
+                <h6><strong>The 5th International Conference on Electrical, Computer and Energy Technologies (ICECET)</strong></h6>
+                <p class="mb-1">A prestigious international conference focusing on cutting-edge research in electrical, computer, and energy technologies.</p>
+                <a href="https://www.icecet.com/" target="_blank" class="btn btn-outline-primary btn-sm">Visit Conference Website</a>
+              </div>
+              
+              <h5 class="mt-4"><strong>Research Impact</strong></h5>
+              <p>This publication represents a significant contribution to the field of educational timetabling and optimization algorithms, demonstrating the practical application of advanced computational intelligence techniques in real-world scenarios.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="images/achievements/ICECET.png" alt="ICECET Conference Logo" class="section-figure" style="max-height: 150px; width: auto;">
+              <p>ICECET 2025 Conference</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads_section_container" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Downloads</h5>
+      <div id="documents_downloads" class="sub-section">
+        <h2>Documents</h2>
+        <p>Key documents related to the Timetable Wiz research project:</p>
+        <div class="row mt-sm-5 downloads-container">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-pdf mr-2"></i>Final Dissertation</h5>
+                <p class="card-text pt-sm-2">The complete research dissertation detailing the project. (Submitted: 08-May-2025)</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">Group Report<a href="docs/24-25J-238_Final_Document.pdf" target="_blank">Download</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-pdf mr-2"></i>Research Paper</h5>
+                <p class="card-text pt-sm-2">Published research paper accepted at ICECET 2025.</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">View/Download<a href="docs/RP_24_25J-238.pdf" target="_blank">Download</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-pdf mr-2"></i>Individual Reports</h5>
+                <p class="card-text pt-sm-2">Individual final reports from team members.</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">IT21259852<a href="docs/Final_Report-IT21259852-24J-25J-238.pdf" target="_blank">Download</a></li>
+                <li class="list-group-item">IT21172182<a href="docs/Final_Report-IT21172182-24-25J_238.pdf" target="_blank">Download</a></li>
+                <li class="list-group-item">IT21266164<a href="docs/Final_Report-T21266164-24-25J-238.pdf" target="_blank">Download</a></li>
+                <li class="list-group-item">IT21208980<a href="docs/FinalReport_It21208980_24-25J-238.pdf" target="_blank">Download</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="presentations_downloads" class="sub-section">
+        <h2>Presentations</h2>
+        <p>Access presentations detailing project milestones and findings.</p>
+        <div class="row mt-sm-5 downloads-container">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2"></i>Project Proposal</h5>
+                <p class="card-text pt-sm-2">Individual proposal reports and presentation slides.</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">Proposals<a href="docs/proposals/" target="_blank">View Folder</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2"></i>Progress Presentations</h5>
+                <p class="card-text pt-sm-2">50% and 90% progress presentation materials.</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">Progress 1<a href="docs/progress1/" target="_blank">View Folder</a></li>
+                <li class="list-group-item">Progress 2<a href="docs/progress2/" target="_blank">View Folder</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-powerpoint mr-2"></i>Final Presentation</h5>
+                <p class="card-text pt-sm-2">Final project defense and viva presentation.</p>
+              </div>
+              <ul class="download-items list-group list-group-flush">
+                <li class="list-group-item">Final Viva<a href="docs/final_presentation/" target="_blank">View Folder</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about_team" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">About Us</h5>
+      <div class="sub-section about-us-container">
+        <h2>Meet The Team</h2>
+        <h4 class="mt-4 mb-3 text-center">Supervisors</h4>
+        <div class="row mt-sm-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card about-us-card">
+              <img src="images/team/jeewaka.png" class="about-us-image" alt="Mr. Jeewaka Perera">
+              <div class="card-body">
+                <h5 class="card-title">Mr. Jeewaka Perera</h5>
+                <span class="badge badge-secondary">Supervisor</span>
+                <p class="small mt-2">Sri Lanka Institute of Information Technology</p>
+                <p class="small">Department of Information Technology</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card about-us-card">
+              <img src="images/team/sasini.png" class="about-us-image" alt="Mrs. Sasini Hathurusinghe">
+              <div class="card-body">
+                <h5 class="card-title">Mrs. Sasini Hathurusinghe</h5>
+                <span class="badge badge-secondary">Co-Supervisor</span>
+                <p class="small mt-2">Sri Lanka Institute of Information Technology</p>
+                <p class="small">Department of Information Technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="mt-5 mb-3 text-center">Research Team Members</h4>
+        <p class="text-center">BSc (Hons) Degree in Information Technology, Specialization in Information Technology</p>
+        <div class="row mt-sm-4">
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card about-us-card h-100">
+              <img src="images/team/weerasinghe.png" class="about-us-image" alt="Weerasinghe K.D.E.I" height="20%"/>
+              <div class="card-body">
+                <h5 class="card-title" style="min-height: 2.5rem; font-size: 1.1rem;">Weerasinghe K.D.E.I</h5>
+                <br>
+                <span class="badge badge-primary">Group Leader</span>
+                <div class="text-group">
+                  <p><strong>Undergraduate</strong></p>
+                  <p>Sri Lanka Institute of Information Technology</p>
+                </div>
+                <div class="text-group">
+                  <p><strong>Department</strong></p>
+                  <p>Information Technology</p>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a class="card-text" style="cursor: pointer;" href="mailto:IT21259852@my.sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i>E-Mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card about-us-card h-100">
+              <img src="images/team/Wijayawardhana.png" class="about-us-image" alt="Wijayawardhana G.L.C.N.D" height="20%"/>
+              <div class="card-body">
+                <h5 class="card-title" style="min-height: 2.5rem; font-size: 1.0rem;">Wijayawardhana G.L.C.N.D</h5>
+                <br>
+                <span class="badge badge-secondary">Team Member</span>
+                <div class="text-group">
+                  <p><strong>Undergraduate</strong></p>
+                  <p>Sri Lanka Institute of Information Technology</p>
+                </div>
+                <div class="text-group">
+                  <p><strong>Department</strong></p>
+                  <p>Information Technology</p>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a class="card-text" style="cursor: pointer;" href="mailto:IT21172182@my.sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i>E-Mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card about-us-card h-100">
+              <img src="images/team/Udayantha.png" class="about-us-image" alt="Udayantha D.M.S" height="20%"/>
+              <div class="card-body">
+                <h5 class="card-title" style="min-height: 2.5rem; font-size: 1.1rem;">Udayantha D.M.S</h5>
+                <br>
+                <span class="badge badge-secondary">Team Member</span>
+                <div class="text-group">
+                  <p><strong>Undergraduate</strong></p>
+                  <p>Sri Lanka Institute of Information Technology</p>
+                </div>
+                <div class="text-group">
+                  <p><strong>Department</strong></p>
+                  <p>Information Technology</p>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a class="card-text" style="cursor: pointer;" href="mailto:IT21266164@my.sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i>E-Mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card about-us-card h-100">
+              <img src="images/team/De Silva.png" class="about-us-image" alt="De Silva K.H.P.N" height="20%"/>
+              <div class="card-body">
+                <h5 class="card-title" style="min-height: 2.5rem; font-size: 1.1rem;">De Silva K.H.P.N</h5>
+                <br>
+                <span class="badge badge-secondary">Team Member</span>
+                <div class="text-group">
+                  <p><strong>Undergraduate</strong></p>
+                  <p>Sri Lanka Institute of Information Technology</p>
+                </div>
+                <div class="text-group">
+                  <p><strong>Department</strong></p>
+                  <p>Information Technology</p>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a class="card-text" style="cursor: pointer;" href="mailto:IT21208980@my.sliit.lk"><i class="fas fa-envelope-open-text mr-2"></i>E-Mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact_section" class="main-sections">
+    <div class="container">
+      <h5 class="section-headings">Contact Us</h5>
+      <div class="sub-section">
+        <h2>Get in Touch</h2>
+        <div class="row mt-sm-5">
+          <div class="col-md-7 col-sm-12 contact-form">
+            <form action="MAILTO:timetable.wiz.research@gmail.com" method="POST" enctype="text/plain">
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" class="form-control" id="contactName" name="name" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email address</label>
+                <input type="email" class="form-control" id="contactEmail" name="email"
+                  placeholder="your.email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message or Query</label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="5"
+                  placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn btncolorgradient btn-primary">Send Message</button>
+            </form>
+          </div>
+          <div class="col-md-5 col-sm-12 contact-details pl-md-5">
+            <div>
+              <h4 class="mb-3">Contact Information</h4>
+              <p><i class="fas fa-envelope mr-2"></i> <a
+                  href="mailto:timetable.wiz.research@gmail.com">timetable.wiz.research@gmail.com</a></p>
+              <p><i class="fas fa-university mr-2"></i> Department of Information Technology</p>
+              <p style="padding-left: 25px;">Sri Lanka Institute of Information Technology (SLIIT)</p>
+              <p style="padding-left: 25px;">New Kandy Road, Malabe, Sri Lanka.</p>
+              <hr>
+              <p>We appreciate your interest in the Timetable Wiz project. Please feel free to reach out with any
+                inquiries or for potential collaborations.</p>
+              
+              <h5 class="mt-4">Application Demo</h5>
+              <p>Experience our live application:</p>
+              <a href="http://localhost:5173" target="_blank" class="btn btn-outline-primary">
+                <i class="fas fa-external-link-alt mr-2"></i>View Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Timetable Wiz Research Group - SLIIT. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html> 
