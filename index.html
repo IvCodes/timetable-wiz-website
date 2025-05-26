@@ -313,7 +313,8 @@ flowchart TD
           <p>Additional tools include Vite, JavaScript, Tailwind CSS, Redux, React Router, NumPy, Pandas, and PyMoo.</p>
         </div>
       </div>
-      
+    </div>
+  </section>
 
   <section id="timeline_section" class="main-sections">
     <div class="container">
@@ -791,6 +792,32 @@ graph LR
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Additional Mermaid initialization for GitHub Pages -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof mermaid !== 'undefined') {
+        // Ensure Mermaid is properly initialized
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'default',
+          securityLevel: 'loose'
+        });
+        
+        // Re-render all Mermaid diagrams
+        setTimeout(() => {
+          const mermaidElements = document.querySelectorAll('.mermaid');
+          mermaidElements.forEach((element, index) => {
+            try {
+              mermaid.init(undefined, element);
+            } catch (error) {
+              console.warn('Mermaid rendering error for element', index, error);
+            }
+          });
+        }, 500);
+      }
+    });
+  </script>
 </body>
 
 </html> 
